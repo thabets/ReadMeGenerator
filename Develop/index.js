@@ -50,7 +50,16 @@ const questions = [
     type: "list",
     message: "What license will you require?",
     name: "license",
-    choices: ["MIT", "BSD3.0", "GPL3.0", "Appache2.0", "None"],
+    choices: [
+      "MIT",
+      "IBM",
+      "ISC",
+      "Mozilla",
+      "Apache 2.0",
+      "Boost",
+      "BSD",
+      "None",
+    ],
   },
   {
     type: "input",
