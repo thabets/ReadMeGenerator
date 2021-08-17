@@ -4,15 +4,7 @@ const fs = require("fs");
 const generateMarkdown = require("../utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
-// title x
-// description x
-// installation x
-// usage x
-// how to contribute x
-// tests
-// license x
-// username x
-// email x
+
 const questions = [
   {
     type: "input",
@@ -33,12 +25,13 @@ const questions = [
   {
     type: "input",
     message:
-      "Does this project require the user to install the application? if so, please provide instructions",
+      "Does this project require the user to install the application? if so, please provide instructions. If not please state that the application will not require installation.",
     name: "install",
   },
   {
     type: "input",
-    message: "Provide description on how to use the application",
+    message:
+      "Provide description on how the user will utilize this application:",
     name: "Usage",
   },
   {
@@ -71,6 +64,11 @@ const questions = [
     type: "input",
     message: "Please provide your email address ",
     name: "email",
+  },
+  {
+    type: "input",
+    message: "Please provide your repository link ",
+    name: "repository",
   },
 ];
 
