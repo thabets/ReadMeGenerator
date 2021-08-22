@@ -57,6 +57,17 @@ function generateMarkdown(data) {
 # Project name : ${data.title}
 # Project Creator : ${data.username}
 
+# Table of Content
+## Project Name
+## Project Creator
+## Description
+## Prerequisites for Use
+## Installation
+## Contributor
+## Contact 
+## license
+
+
 Project name is \`${data.title}\` This application allows the user to ${
     data.Usage
   }.
