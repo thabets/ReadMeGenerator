@@ -1,7 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-
-const { NONAME } = require("dns");
-
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license == null || "undifined") {
@@ -50,7 +47,7 @@ function renderLicenseSection(license) {
     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
   } else if (license == "Boost") {
     return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
-  } else {
+  } else if (license == "BSD") {
     return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
   }
 }
@@ -60,9 +57,9 @@ function generateMarkdown(data) {
 # Project name : ${data.title}
 # Project Creator : ${data.username}
 
-Project name is \`${data.title}\` that allows the user ${data.Usage}.
-
-Additional line of information text about what the project does. Your introduction should be around 2 or 3 sentences. Don't go overboard, people won't read it.
+Project name is \`${data.title}\` This application allows the user to ${
+    data.Usage
+  }.
 
 ## Prerequisites
 

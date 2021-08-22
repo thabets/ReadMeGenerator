@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("../utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // TODO: Create an array of questions for user input
 
@@ -73,7 +73,10 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  fs.writeFileSync("./output/README.md", generateMarkdown(data), "utf8");
+  console.log("done");
+}
 
 // TODO: Create a function to initialize app
 function init() {
@@ -82,10 +85,44 @@ function init() {
     .then(function (data) {
       console.log(data);
 
-      const woot = generateMarkdown(data);
-      console.log(woot);
+      writeToFile(data);
     });
 }
 
 // Function call to initialize app
 init();
+
+function example(fruit) {
+  // if (fruit === "banana") {
+  //   return "mmm potassium";
+  // } else if (fruit === "apple") {
+  //   return "johnny appleseed";
+  // } else if (fruit === "orange") {
+  //   return "vitamin c";
+  // } else if (fruit === "pomegranate") {
+  //   return "why eat this it takes too long to get ready";
+  // }
+
+  let statement = "";
+  switch (fruit) {
+    case "banana":
+      statement = "mmm potassium";
+      break;
+    case "apple":
+      statement = "johnny appleseed";
+      break;
+    case "orange":
+      statement = "vitamin c";
+      break;
+    case "pomegranate":
+      statement = "why eat this it takes too long to get ready";
+      break;
+    default:
+      statement = "";
+      break;
+  }
+  return statement;
+}
+
+//const statement = example("banana");
+//console.log(statement);
