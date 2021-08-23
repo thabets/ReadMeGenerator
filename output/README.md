@@ -1,8 +1,24 @@
 
-# Project name : weatherman
-# Project Creator : samhub
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Project name is `weatherman` This application allows the user to he will check the weather with it, the user will enter a city or zipcode to identify his location and the application will return the weather data.
+# Table of Content
+## [Project Name](#project-name)
+## [Project Creator](#project-creator)
+## [Description](#description)
+## [Prerequisites for Use](#prerequisites)
+## [Installation](#installing)
+## [Contributing To](#contributing-to)
+## [Contributors](#contributors)
+## [Contact](#contact)
+## [license](#license)
+
+# Project name
+
+# Project Creator
+
+
+# Description
+Project name is `` This application allows the user to .
 
 ## Prerequisites
 
@@ -12,15 +28,15 @@ Before you begin, ensure you have met the following requirements:
 * You have a Windows/Linux/Mac machine.
 * You have read guide/documentation_related_to_project>.
 
-## Installing <weatherman>
+## Installing
 
-To install <weatherman>, follow these steps:
-
-No, this application does require the user to preform any form of installation
+To install <>, follow these steps:
 
 
-## Contributing to <weatherman>
-To contribute to <weatherman>, follow these steps:
+
+
+## Contributing to
+To contribute to <>, follow these steps:
 
 1. Fork this repository.
 2. Create a branch: `git checkout -b <branch_name>`.
@@ -34,12 +50,12 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 Thanks to the following people who have contributed to this project:
 
-<sam and micheal>
+<>
 
 ## Contact
 
-If you want to contact me you can reach me at <sam@gmail>.
+If you want to contact me you can reach me at <>.
 
 ## License
 
-This project uses the following license: [<MIT>](<[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)>).
+This project uses the following license: [MIT](https://opensource.org/licenses/MIT).

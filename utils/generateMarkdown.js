@@ -1,41 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  if (license == null || "undifined") {
-    return "";
-  } else {
-    return license;
-  }
-}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license == "None") {
-    return "None";
-  } else if (license == "MIT") {
-    return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
-  } else if (license == "IBM") {
-    return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
-  } else if (license == "ISC") {
-    return "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
-  } else if (license == "Mozilla") {
-    return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
-  } else if (license == "Apache 2.0") {
-    return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
-  } else if (license == "Boost") {
-    return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
-  } else {
-    return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
-  }
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  if (license == "None") {
-    return "";
-  } else if (license == "MIT") {
+  if (license == "MIT") {
     return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
   } else if (license == "IBM") {
     return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
@@ -49,25 +15,76 @@ function renderLicenseSection(license) {
     return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
   } else if (license == "BSD") {
     return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+  } else {
+    return "None";
   }
 }
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+function renderLicenseLink(license) {
+  if (license == "MIT") {
+    return "(https://opensource.org/licenses/MIT)";
+  } else if (license == "IBM") {
+    return "(https://opensource.org/licenses/IPL-1.0)";
+  } else if (license == "ISC") {
+    return "(https://opensource.org/licenses/ISC)";
+  } else if (license == "Mozilla") {
+    return "(https://opensource.org/licenses/MPL-2.0)";
+  } else if (license == "Apache 2.0") {
+    return "(https://opensource.org/licenses/Apache-2.0)";
+  } else if (license == "Boost") {
+    return "(https://www.boost.org/LICENSE_1_0.txt)";
+  } else if (license == "BSD") {
+    return "(https://opensource.org/licenses/BSD-3-Clause)";
+  } else {
+    return "None";
+  }
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+// function renderLicenseSection(license) {
+//   if (license == "None") {
+//     return "";
+//   } else if (license == "MIT") {
+//     return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+//   } else if (license == "IBM") {
+//     return "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)";
+//   } else if (license == "ISC") {
+//     return "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)";
+//   } else if (license == "Mozilla") {
+//     return "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+//   } else if (license == "Apache 2.0") {
+//     return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+//   } else if (license == "Boost") {
+//     return "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)";
+//   } else if (license == "BSD") {
+//     return "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+//   }
+// }
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
-# Project name : ${data.title}
-# Project Creator : ${data.username}
+  ${renderLicenseBadge(data.license)}
 
 # Table of Content
-## Project Name
-## Project Creator
-## Description
-## Prerequisites for Use
-## Installation
-## Contributor
-## Contact 
-## license
+## [Project Name](#project-name)
+## [Project Creator](#project-creator)
+## [Description](#description)
+## [Prerequisites for Use](#prerequisites)
+## [Installation](#installing)
+## [Contributing To](#contributing-to)
+## [Contributors](#contributors)
+## [Contact](#contact)
+## [license](#license)
 
+# Project name
+${data.title}
+# Project Creator
+${data.username}
 
+# Description
 Project name is \`${data.title}\` This application allows the user to ${
     data.Usage
   }.
@@ -80,14 +97,14 @@ Before you begin, ensure you have met the following requirements:
 * You have a Windows/Linux/Mac machine.
 * You have read guide/documentation_related_to_project>.
 
-## Installing <${data.title}>
+## Installing
 
 To install <${data.title}>, follow these steps:
 
 ${data.install}
 
 
-## Contributing to <${data.title}>
+## Contributing to
 To contribute to <${data.title}>, follow these steps:
 
 1. Fork this repository.
@@ -110,9 +127,9 @@ If you want to contact me you can reach me at <${data.email}>.
 
 ## License
 
-This project uses the following license: [<${
+This project uses the following license: [${data.license}]${renderLicenseLink(
     data.license
-  }>](<${renderLicenseLink()}>).
+  )}.
 `;
 }
 

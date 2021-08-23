@@ -83,46 +83,9 @@ function init() {
   inquirer
     .prompt(questions) // Write the user response to a file by chaining the below callback method to the prompt above.
     .then(function (data) {
-      console.log(data);
-
       writeToFile(data);
     });
 }
 
 // Function call to initialize app
 init();
-
-function example(fruit) {
-  // if (fruit === "banana") {
-  //   return "mmm potassium";
-  // } else if (fruit === "apple") {
-  //   return "johnny appleseed";
-  // } else if (fruit === "orange") {
-  //   return "vitamin c";
-  // } else if (fruit === "pomegranate") {
-  //   return "why eat this it takes too long to get ready";
-  // }
-
-  let statement = "";
-  switch (fruit) {
-    case "banana":
-      statement = "mmm potassium";
-      break;
-    case "apple":
-      statement = "johnny appleseed";
-      break;
-    case "orange":
-      statement = "vitamin c";
-      break;
-    case "pomegranate":
-      statement = "why eat this it takes too long to get ready";
-      break;
-    default:
-      statement = "";
-      break;
-  }
-  return statement;
-}
-
-//const statement = example("banana");
-//console.log(statement);
