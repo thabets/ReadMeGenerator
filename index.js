@@ -35,11 +35,6 @@ const questions = [
     name: "Usage",
   },
   {
-    type: "input", //look what is meant regarding table of content
-    message: "Please provide a table of content regarding you project",
-    name: "table of content",
-  },
-  {
     type: "list",
     message: "What license will you require?",
     name: "license",

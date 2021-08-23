@@ -79,10 +79,8 @@ function generateMarkdown(data) {
 ## [Contact](#contact)
 ## [license](#license)
 
-# Project name
-${data.title}
-# Project Creator
-${data.username}
+# Project name ${data.title}
+# Project Creator ${data.username}
 
 # Description
 Project name is \`${data.title}\` This application allows the user to ${
