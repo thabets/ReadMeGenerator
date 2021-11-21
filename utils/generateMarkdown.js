@@ -107,7 +107,7 @@ To install <${data.title}>, follow these steps:
 ${data.install}
 
 ## Screenshot
-![my screenshot] ${data.screenshot}
+![Screenshot](${data.screenshot})
 
 ## Active Url
 
