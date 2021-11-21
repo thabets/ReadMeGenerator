@@ -74,17 +74,22 @@ function generateMarkdown(data) {
 ## [Description](#description)
 ## [Prerequisites for Use](#prerequisites)
 ## [Installation](#installing)
+## [Screenshot](#screenshot)
+## [Active Url](#active-url)
+## [Repository Link](#repository-link)
 ## [Contributing To](#contributing-to)
 ## [Contributors](#contributors)
 ## [Contact](#contact)
 ## [license](#license)
 
-# Project name ${data.title}
-# Project Creator ${data.username}
+# Project name
+${data.title}
+# Project Creator
+${data.name}
 
 # Description
 Project name is \`${data.title}\` This application allows the user to ${
-    data.Usage
+    data.description
   }.
 
 ## Prerequisites
@@ -101,6 +106,16 @@ To install <${data.title}>, follow these steps:
 
 ${data.install}
 
+## Screenshot
+![my screenshot] ${data.screenshot}
+
+## Active Url
+
+Here is the link to the active site: ${data.activeURL}
+
+## Repository Link
+
+Here is the link to the Github Repository: ${data.repository}
 
 ## Contributing to
 To contribute to <${data.title}>, follow these steps:
@@ -117,7 +132,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 Thanks to the following people who have contributed to this project:
 
-<${data.contribute}>
+<${data.contributor}>
 
 ## Contact
 
